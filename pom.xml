@@ -21,12 +21,23 @@
   
   <!-- SCM -->
   <scm>
-    <connection>scm:svn:http://anonsvn.jboss.org/repos/jbossas/projects/ejb3/trunk/sis</connection>
-    <developerConnection>scm:svn:https://svn.jboss.org/repos/jbossas/projects/ejb3/trunk/sis</developerConnection>
-    <url>http://anonsvn.jboss.org/repos/jbossas/projects/ejb3/trunk/sis</url>
+    <connection>scm:git:git://github.com/jbossejb3/jboss-ejb3-sis.git</connection>
+    <developerConnection>scm:git:git@github.com:jbossejb3/jboss-ejb3-sis.git</developerConnection>
+    <url>http://github.com/jbossejb3/jboss-ejb3-sis</url>
   </scm>
   
-  
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.0</version>
+        <configuration>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
